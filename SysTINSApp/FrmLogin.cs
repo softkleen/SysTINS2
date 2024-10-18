@@ -16,5 +16,11 @@ namespace SysTINSApp
         {
             InitializeComponent();
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            SysTINSClass.Class1 class1 = new();
+            class1.Inserir();
+        }
     }
 }

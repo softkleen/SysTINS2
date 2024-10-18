@@ -2,7 +2,9 @@
 {
     public class Class1
     {
-
+        /// <summary>
+        /// 
+        /// </summary>
         public int Id { get; set; }
 
         // XML Docs
@@ -16,6 +18,15 @@
         public double Calcular(double valor, int nparc) 
         {
             return valor / nparc;
+        }
+
+        /// <summary>
+        /// Insere uma class1
+        /// não tem retorno de valor
+        /// </summary>
+        public void Inserir() // isso aqui insere uma tabela 
+        { 
+        
         }
 
     }
