@@ -38,8 +38,15 @@ namespace SysTINSApp
             //{
             //    MessageBox.Show("Nivel não encontrado");
             //}
-            Nivel nivel = new(1024,"Aten", "ATD");
-            nivel.Id = 1025;
+            // Nivel nivel = new(1024,"Aten", "ATD");
+            // nivel.Id = 1025;
+            var n = Nivel.ObterPorId(1);
+            n.Nome = "Atendente";
+            if (n.Atualizar())
+            {
+                MessageBox.Show("Nékifoi?");
+            }
+            
         }
     }
 }
