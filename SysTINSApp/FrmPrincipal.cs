@@ -40,12 +40,12 @@ namespace SysTINSApp
             //}
             // Nivel nivel = new(1024,"Aten", "ATD");
             // nivel.Id = 1025;
-            var n = Nivel.ObterPorId(1);
-            n.Nome = "Atendente";
-            if (n.Atualizar())
-            {
-                MessageBox.Show("Nékifoi?");
-            }
+            //var n = Nivel.ObterPorId(1);
+            //n.Nome = "Atendente";
+            //if (n.Atualizar())
+            //{
+            //    MessageBox.Show("Nékifoi?");
+            //}
             
         }
     }
