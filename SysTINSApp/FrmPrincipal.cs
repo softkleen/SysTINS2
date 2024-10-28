@@ -20,33 +20,17 @@ namespace SysTINSApp
 
         private void novoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FrmUsuarios frmUsuarios = new();
-            //frmUsuarios.MdiParent = this;
-            frmUsuarios.Show();
+            FrmUsuarios frmUsuarios = new();// cria uma instância (objeto) do FrmUsuarios 
+            frmUsuarios.MdiParent = this; // associa esta instância ao container (MDI) FrmPrincipal
+            frmUsuarios.Show(); // exibe o form Usuários na janela do sistema 
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            //var cmd = Banco.Abrir();
-            //cmd.CommandText = "select * from niveis where id = 2";
-            //var dr = cmd.ExecuteReader();
-            //if (dr.Read())
-            //{
-            //    MessageBox.Show($" olá {dr.GetString(1)}");
-            //}
-            //else 
-            //{
-            //    MessageBox.Show("Nivel não encontrado");
-            //}
-            // Nivel nivel = new(1024,"Aten", "ATD");
-            // nivel.Id = 1025;
-            //var n = Nivel.ObterPorId(1);
-            //n.Nome = "Atendente";
-            //if (n.Atualizar())
-            //{
-            //    MessageBox.Show("Nékifoi?");
-            //}
-            
+            Hide();
+            FrmLogin frmLogin = new();
+            //frmLogin.ShowDialog();
+            Show();
         }
     }
 }

@@ -174,8 +174,9 @@
             // 
             // cmbNivel
             // 
+            cmbNivel.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbNivel.FormattingEnabled = true;
-            cmbNivel.Location = new Point(330, 146);
+            cmbNivel.Location = new Point(472, 146);
             cmbNivel.Name = "cmbNivel";
             cmbNivel.Size = new Size(121, 23);
             cmbNivel.TabIndex = 8;
@@ -183,7 +184,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(330, 128);
+            label5.Location = new Point(472, 128);
             label5.Name = "label5";
             label5.Size = new Size(34, 15);
             label5.TabIndex = 9;
@@ -214,14 +215,14 @@
             // 
             txtNome.Location = new Point(197, 90);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(254, 23);
+            txtNome.Size = new Size(396, 23);
             txtNome.TabIndex = 12;
             // 
             // txtEmail
             // 
             txtEmail.Location = new Point(107, 146);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(204, 23);
+            txtEmail.Size = new Size(344, 23);
             txtEmail.TabIndex = 13;
             // 
             // txtSenha
