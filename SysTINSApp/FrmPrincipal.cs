@@ -29,8 +29,15 @@ namespace SysTINSApp
         {
             Hide();
             FrmLogin frmLogin = new();
-            //frmLogin.ShowDialog();
-            Show();
+            //frmLogin.Show();
+            if (frmLogin.ShowDialog() == DialogResult.OK)
+            {
+                tsslUsuario.Text = Program.UsuarioLogado.Nome + " - " + Program.UsuarioLogado.Nivel.Nome;
+                Show();
+            }
+            else
+                Application.Exit();
+                        
         }
     }
 }

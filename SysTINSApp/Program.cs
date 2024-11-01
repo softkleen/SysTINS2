@@ -1,7 +1,10 @@
+using SysTINSClass;
+
 namespace SysTINSApp
 {
     internal static class Program
     {
+        public static Usuario UsuarioLogado;
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
