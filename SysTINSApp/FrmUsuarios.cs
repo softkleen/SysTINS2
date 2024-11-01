@@ -32,13 +32,13 @@ namespace SysTINSApp
         private void btnInserir_Click(object sender, EventArgs e)
         {
             Usuario usuario = new(
-                txtNome.Text, 
-                txtEmail.Text, 
-                txtSenha.Text, 
+                txtNome.Text,
+                txtEmail.Text,
+                txtSenha.Text,
                 Nivel.ObterPorId(Convert.ToInt32(cmbNivel.SelectedValue))
                 );
             usuario.Inserir();
-            if (usuario.Id > 0) 
+            if (usuario.Id > 0)
             {
                 // carrega grid
                 CarregaGridUsuarios();
@@ -61,6 +61,36 @@ namespace SysTINSApp
                 dgvUsuarios.Rows[linha].Cells[4].Value = usuario.Ativo;
                 linha++;
             }
+        }
+
+        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int linhaAtual = dgvUsuarios.CurrentRow.Index;
+            int idUser = Convert.ToInt32(dgvUsuarios.Rows[linhaAtual].Cells[0].Value);
+            var usuario = Usuario.ObterPorId(idUser);
+            txtId.Text = usuario.Id.ToString();
+            txtNome.Text = usuario.Nome;
+            txtEmail.Text = usuario.Email;
+            chkAtivo.Checked = usuario.Ativo;
+            cmbNivel.SelectedValue = usuario.Nivel.Id;
+            btnAtualizar.Enabled = true;
+
+            //MessageBox.Show(idUser.ToString());
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            Usuario usuario = new();
+            usuario.Id = int.Parse(txtId.Text);
+            usuario.Nome = txtNome.Text;
+            usuario.Senha = txtSenha.Text;
+            usuario.Nivel = Nivel.ObterPorId(Convert.ToInt32(cmbNivel.SelectedValue));
+            if (usuario.Atualizar())
+            {
+                CarregaGridUsuarios();
+                MessageBox.Show("Usuário atualizado com sucesso!");
+            }
+
         }
     }
 }
