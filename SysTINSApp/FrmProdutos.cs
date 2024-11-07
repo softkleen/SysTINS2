@@ -16,5 +16,10 @@ namespace SysTINSApp
         {
             InitializeComponent();
         }
+
+        private void FrmProdutos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
