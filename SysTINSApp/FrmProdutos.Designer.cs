@@ -60,12 +60,13 @@
             txtUnidadeVenda = new TextBox();
             label1 = new Label();
             panel1 = new Panel();
+            label12 = new Label();
+            label11 = new Label();
+            txtNewCatSigla = new TextBox();
             txtNewCat = new TextBox();
             label10 = new Label();
             button1 = new Button();
-            txtNewCatSigla = new TextBox();
-            label11 = new Label();
-            label12 = new Label();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvProdutos).BeginInit();
             gpProdutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)npEstoqueMinimo).BeginInit();
@@ -182,6 +183,7 @@
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(282, 23);
             cmbCategoria.TabIndex = 5;
+            cmbCategoria.TextChanged += cmbCategoria_TextChanged;
             // 
             // npEstoqueMinimo
             // 
@@ -207,6 +209,7 @@
             btnAdicionar.TabIndex = 7;
             btnAdicionar.Text = "&Adicionar";
             btnAdicionar.UseVisualStyleBackColor = true;
+            btnAdicionar.Click += btnAdicionar_Click;
             // 
             // btnEditar
             // 
@@ -353,12 +356,38 @@
             panel1.Controls.Add(txtNewCatSigla);
             panel1.Controls.Add(txtNewCat);
             panel1.Controls.Add(label10);
+            panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Location = new Point(613, 69);
             panel1.Name = "panel1";
             panel1.Size = new Size(336, 187);
             panel1.TabIndex = 10;
             panel1.Visible = false;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(38, 75);
+            label12.Name = "label12";
+            label12.Size = new Size(32, 15);
+            label12.TabIndex = 3;
+            label12.Text = "Sigla";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(38, 31);
+            label11.Name = "label11";
+            label11.Size = new Size(40, 15);
+            label11.TabIndex = 3;
+            label11.Text = "Nome";
+            // 
+            // txtNewCatSigla
+            // 
+            txtNewCatSigla.Location = new Point(38, 92);
+            txtNewCatSigla.Name = "txtNewCatSigla";
+            txtNewCatSigla.Size = new Size(96, 23);
+            txtNewCatSigla.TabIndex = 2;
             // 
             // txtNewCat
             // 
@@ -372,7 +401,7 @@
             label10.AutoSize = true;
             label10.BorderStyle = BorderStyle.FixedSingle;
             label10.Cursor = Cursors.No;
-            label10.Location = new Point(156, 7);
+            label10.Location = new Point(114, 9);
             label10.Name = "label10";
             label10.Size = new Size(91, 17);
             label10.TabIndex = 1;
@@ -380,37 +409,23 @@
             // 
             // button1
             // 
-            button1.Location = new Point(83, 139);
+            button1.Location = new Point(11, 142);
             button1.Name = "button1";
-            button1.Size = new Size(194, 23);
+            button1.Size = new Size(138, 23);
             button1.TabIndex = 0;
             button1.Text = "Adicionar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // txtNewCatSigla
+            // button2
             // 
-            txtNewCatSigla.Location = new Point(38, 92);
-            txtNewCatSigla.Name = "txtNewCatSigla";
-            txtNewCatSigla.Size = new Size(96, 23);
-            txtNewCatSigla.TabIndex = 2;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(38, 31);
-            label11.Name = "label11";
-            label11.Size = new Size(40, 15);
-            label11.TabIndex = 3;
-            label11.Text = "Nome";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(38, 75);
-            label12.Name = "label12";
-            label12.Size = new Size(32, 15);
-            label12.TabIndex = 3;
-            label12.Text = "Sigla";
+            button2.Location = new Point(178, 141);
+            button2.Name = "button2";
+            button2.Size = new Size(138, 23);
+            button2.TabIndex = 0;
+            button2.Text = "Cancelar";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // FrmProdutos
             // 
@@ -474,5 +489,6 @@
         private TextBox txtNewCat;
         private Label label10;
         private Button button1;
+        private Button button2;
     }
 }

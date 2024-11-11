@@ -27,6 +27,11 @@ namespace SysTINSClass
             Nome = nome;
             Sigla = sigla;
         }
+        public Categoria(int id, string? nome)
+        {
+            Id = id;
+            Nome = nome;
+        }
         public void Inserir() 
         {
             var cmd = Banco.Abrir();
@@ -48,8 +53,8 @@ namespace SysTINSClass
             {
                 categoria = new(
                     dr.GetInt32(0),
-                    dr.GetString(1),
-                    dr.GetString(2)
+                    dr.GetString(1)
+                    
                     );
             }
             return categoria;
@@ -62,10 +67,10 @@ namespace SysTINSClass
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                categorias.Add( new(
+                categorias.Add(new(
                     dr.GetInt32(0),
-                    dr.GetString(1),
-                    dr.GetString(2)
+                    dr.GetString(1)
+                    
                     ));
             }
             return categorias;
