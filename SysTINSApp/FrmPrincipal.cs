@@ -30,13 +30,13 @@ namespace SysTINSApp
             Hide();
             FrmLogin frmLogin = new();
             //frmLogin.Show();
-            //if (frmLogin.ShowDialog() == DialogResult.OK)
-            //{
-            //    tsslUsuario.Text = Program.UsuarioLogado.Nome + " - " + Program.UsuarioLogado.Nivel.Nome;
-            Show();
-            //}
-            //else
-            //    Application.Exit();
+            if (frmLogin.ShowDialog() == DialogResult.OK)
+            {
+                tsslUsuario.Text = Program.UsuarioLogado.Nome + " - " + Program.UsuarioLogado.Nivel.Nome;
+                Show();
+            }
+            else
+                Application.Exit();
 
         }
 

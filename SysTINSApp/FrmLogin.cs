@@ -46,7 +46,7 @@ namespace SysTINSApp
                 tentativa++;
                 if (tentativa < 3)
                 {
-                    lblMensagem.Text = $"Usuário e/ou senha inválidos \n Restam {tentativa + 1}/3 tentativas ";
+                    lblMensagem.Text = $"Usuário e/ou senha inválidos \n Restam {tentativa+1 }/3 tentativas ";
                 }
                 else 
                 {
