@@ -9,6 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="FrmClienteNovo.cs" />
+    <Compile Remove="FrmClienteNovo.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="FrmClienteNovo.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SysTINSClass\SysTINSClass.csproj" />
   </ItemGroup>
 

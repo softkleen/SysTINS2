@@ -61,7 +61,8 @@ namespace SysTINSClass
             cmd.CommandText = "sp_pedido_insert";
             cmd.Parameters.AddWithValue("spusuario_id",Usuario.Id);
             cmd.Parameters.AddWithValue("spcliente_id",Cliente.Id);
-            cmd.ExecuteNonQuery();
+            Id = Convert.ToInt32(cmd.ExecuteScalar());
+            //cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }
         public void Atualizar() 

@@ -70,7 +70,7 @@
             tbpEnderecos.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEnderecos).BeginInit();
-            SuspendLayout();
+            //SuspendLayout();
             // 
             // tabControl1
             // 

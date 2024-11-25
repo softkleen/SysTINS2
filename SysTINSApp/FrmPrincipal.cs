@@ -52,5 +52,13 @@ namespace SysTINSApp
             frmProdutos.Show();
 
         }
+
+        private void novoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            FrmPedidoNovo  frmPedidoNovo = new();
+            frmPedidoNovo.MdiParent = this;
+            frmPedidoNovo.txtUsuario.Text = Program.UsuarioLogado.Id + " - " + Program.UsuarioLogado.Nome;
+            frmPedidoNovo.Show();
+        }
     }
 }
