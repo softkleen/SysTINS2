@@ -12,7 +12,7 @@ namespace SysTINSClass
     {
         public static MySqlCommand Abrir(int cod = 0) // método para abrir conexão
         {
-            string strcon = @"server=127.0.0.1;database=systinsdb01;user=root;password=";
+            string strcon = @"server=10.91.45.47;database=systinsdb01;user=aluno;password=senac";
             MySqlConnection cn = new(strcon);
             MySqlCommand cmd = new();
             try
